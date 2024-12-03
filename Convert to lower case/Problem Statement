@@ -1,0 +1,27 @@
+Write a program that converts every character of the user name as lowercase and combines the first name and last name of the user.
+
+You have given the first name and last name of the user as the input. The names of the users should be stored in lowercase only and the output should be a combination of both First name and Last name.
+
+Input:-
+firstName: “JOHN”
+lastName: “DOE”
+
+
+Expected Output:-
+Username: johndoe
+
+Test Cases:-
+
+1- The final output should be printed correctly.
+
+a- You have to take firstName as 'JOHN' and lastName as 'DOE'. After applying the required method the output should come as 'johndoe'.
+
+Note:
+You will be given a function with inputs already provided as parameters (inside the parentheses of the function). Do not create or assign values to these inputs inside the function.
+
+
+For example, if the function is written like this:
+
+You should write your code only between the lines let answer; and return answer;
+Use the inputs provided (param1 and param2) to write the required logic. The test cases will automatically provide values for these inputs, so you don’t need to define them yourself.
+You will learn about functions in detail in upcoming lectures. For now, focus on writing the logic inside the given function.
