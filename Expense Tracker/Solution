@@ -1,0 +1,41 @@
+function main() {
+    class ExpenseTracker {
+        #expenses;
+        #income;
+
+        constructor(income) {
+            this.#income = income; // Private property for income
+            this.#expenses = [];  // Private property for storing expenses
+        }
+
+        #calculateTotalExpenses() {
+            let sum = 0;
+            for (let expense of this.#expenses) {
+                sum += expense.amount;
+            }
+            return sum;
+        }
+
+        addExpense(name, amount, date) {
+            this.#expenses.push({ name, amount, date });
+        }
+
+        calculateBalance() {
+            const totalExpenses = this.#calculateTotalExpenses();
+            return this.#income - totalExpenses;
+        }
+
+        // Public method to list expenses (optional, useful for debugging or displaying expenses)
+        listExpenses() {
+            return this.#expenses;
+        }
+    }
+
+    // Example usage
+    const tracker = new ExpenseTracker(5000);
+    tracker.addExpense("Rent", 1000, "2021-10-01");
+    tracker.addExpense("Groceries", 500, "2021-10-02");
+    console.log(tracker.calculateBalance()); // should output 3500
+
+    return ExpenseTracker;
+}
