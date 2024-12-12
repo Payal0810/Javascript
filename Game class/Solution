@@ -1,0 +1,65 @@
+function main() {
+    // Create Character constructor function
+    function Character(health, strength, agility) {
+        this.health = health;
+        this.strength = strength;
+        this.agility = agility;
+    }
+
+    // Create Warrior constructor function inheriting from Character
+    function Warrior(health, strength, agility, weaponType) {
+        Character.call(this, health, strength, agility); // Call Character constructor
+        this.weaponType = weaponType; // Add Warrior-specific property
+    }
+    Warrior.prototype = Object.create(Character.prototype); // Inherit from Character
+    Warrior.prototype.constructor = Warrior;
+
+    // Create Mage constructor function inheriting from Character
+    function Mage(health, strength, agility, spellType) {
+        Character.call(this, health, strength, agility); // Call Character constructor
+        this.spellType = spellType; // Add Mage-specific property
+    }
+    Mage.prototype = Object.create(Character.prototype); // Inherit from Character
+    Mage.prototype.constructor = Mage;
+
+    // Create Archer constructor function inheriting from Character
+    function Archer(health, strength, agility, arrowType) {
+        Character.call(this, health, strength, agility); // Call Character constructor
+        this.arrowType = arrowType; // Add Archer-specific property
+    }
+    Archer.prototype = Object.create(Character.prototype); // Inherit from Character
+    Archer.prototype.constructor = Archer;
+
+    // Create Hero constructor function inheriting from both Warrior and Mage
+    function Hero(health, strength, agility, weaponType, spellType, specialAbility) {
+        Character.call(this, health, strength, agility); // Call Character constructor
+        Warrior.call(this, health, strength, agility, weaponType); // Call Warrior constructor
+        Mage.call(this, health, strength, agility, spellType); // Call Mage constructor
+        this.specialAbility = specialAbility; // Add Hero-specific property
+    }
+    Hero.prototype = Object.create(Character.prototype); // Inherit from Character
+    Hero.prototype.constructor = Hero;
+
+    // Create Enemy constructor function inheriting from Character
+    function Enemy(health, strength, agility, enemyType) {
+        Character.call(this, health, strength, agility); // Call Character constructor
+        this.enemyType = enemyType; // Add Enemy-specific property
+    }
+    Enemy.prototype = Object.create(Character.prototype); // Inherit from Character
+    Enemy.prototype.constructor = Enemy;
+
+    // Test cases
+    let warrior1 = new Warrior(100, 50, 30, "sword");
+    let mage1 = new Mage(80, 20, 50, "fireball");
+    let archer1 = new Archer(90, 40, 40, "poison");
+    let hero1 = new Hero(120, 60, 40, "axe", "ice", "double damage");
+    let enemy1 = new Enemy(200, 80, 20, "goblin");
+
+    console.log(warrior1);
+    console.log(mage1);
+    console.log(archer1);
+    console.log(hero1);
+    console.log(enemy1);
+
+    return { Character, Hero, Warrior, Mage, Archer, Enemy };
+}
