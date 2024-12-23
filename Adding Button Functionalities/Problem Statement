@@ -1,0 +1,20 @@
+In the previous topic, you have successfully constructed a social media page featuring 'like' and 'comment' buttons. However, these buttons are currently non-functional.
+
+Objectives
+
+
+Like Button:
+
+1. Add a click event listener to the like button.
+2. Increment the "likes" property of the "post1" object when the button is clicked.
+3. The like button should only be clickable once.
+4. On click of the like button, the background color of the like button with the class "like-button" should be changed to red.
+Comment Button:
+
+1. Add a click event listener to the comment button.
+2. After each click, the comment should be added to the "comments" array of "post1".
+3. Display the comment in the "comment-container" div below the post accordingly.
+Update Footer:
+
+1. After clicking both buttons, update the footer section that contains the likes and comments count.
+2. Display the updated number of likes and comments in the footer.
