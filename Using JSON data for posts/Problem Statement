@@ -1,0 +1,26 @@
+You have an existing code that displays a single post using a single object. However, you want to refactor the code to utilize the postsData JSON array to display multiple posts individually on the window. Additionally, you need to update the event handlers for the like and comment buttons.
+
+Objectives:-
+
+
+1- Refactor the code to use the postsData JSON array to display all the posts individually on the window.
+
+2- Modify the event handlers for the like and comment buttons to correctly handle interactions for each post.
+
+3- When the like button is clicked for a specific post, it should increment the "likes" property of that post in the postsData JSON array.
+
+4- The like button for each post should only be clickable once.
+
+5- Also, the background of the button should be changed to red for all the liked posts.
+
+6- When the comment button is clicked for a specific post, the comment should be added to the "comments" array of that post in the postsData JSON array.
+
+7- Display the added comment in the corresponding post's "comment-container" div below the post.
+
+8- Update the footer for each post to display the updated number of likes and comments.
+
+
+
+Note:
+Create a new Set to keep track of post IDs that have been liked. This ensures that each post can be liked only once and allows for a quick lookup of liked posts.
+
