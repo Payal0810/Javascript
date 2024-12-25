@@ -1,0 +1,36 @@
+function main(email) {
+  let result;
+
+  // Step 1: Find the index of "@" in the email
+  let atIndex = email.lastIndexOf("@");
+
+  // Step 2: Find the index of the last dot "." in the email
+  let dotIndex = email.lastIndexOf(".");
+
+  // Step 3: Calculate the length of the email
+  let len = email.length;
+    
+  
+  if(atIndex > 0 && dotIndex > atIndex + 3 && len - dotIndex >= 3){
+      result = email;
+      console.log("Welcome " + result);
+  }
+    else{
+        result = "invalid email";
+        console.log(result);
+    }
+ 
+
+  // Step 4: Validate the email
+  // Check if there are at least 3 characters before the "@" symbol
+  // Ensure there is a dot "." at least 4 characters after "@"
+  // Make sure there are at least 2 characters after the last dot "."
+  
+  // If all conditions are met, assign a welcome message with email name to result
+  // If any condition fails, assign "invalid email" to result
+     
+  
+
+  // Return the final result
+  return result;
+}
