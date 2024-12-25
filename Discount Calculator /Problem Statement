@@ -1,0 +1,26 @@
+You are developing an online shopping website, and you want to implement a discount system based on the total purchase amount. Write a JavaScript program using if statements and operators that calculate and display the total cost after applying a discount. The discount rules are as follows:
+
+a- If the total purchase amount is $100 or more, apply a 10% discount 
+b- If the total purchase amount is between $0 (inclusive) and $99.99 (inclusive), apply a 5% discount.
+c- If the total purchase amount is less than $50, no discount is applied.
+
+
+Input
+200
+Expected Output
+180
+Explanation
+The amount is $200, so a 10% discount is applied: 200 - (200 * 0.10) = 180.
+
+
+Input
+80
+Expected Output
+76
+Explanation
+Explanation: The amount is $80, so a 5% discount is applied: 80 - (80 * 0.05) = 76.
+
+
+Hints:
+a- Use if-else statements to check the total amount and determine the appropriate discount.
+b- Convert percentage values to decimal form (e.g., 10% becomes 0.10) for the discount calculations.
